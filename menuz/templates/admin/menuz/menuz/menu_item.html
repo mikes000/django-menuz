@@ -1,4 +1,4 @@
-{% load adminmedia %}
+{% load staticfiles %}
 {% load menuz_tags %}
 {% load i18n %}
     <div class="menu_item {{item.content_type}}_{{item.id}}" rel="{{item.id}}">
@@ -27,7 +27,7 @@
 
     <p>
     <input type="button" name="btn_update" value="{% trans 'Update' %}" onclick="update_menu('{{item.content_type}}',{{item.id}});"/>
-    <img src="{% admin_media_prefix %}menuz/images/loading.gif" class="menu_update_loading loading_{{item.id}}"/>
+    <img src="{% static 'admin/menuz/images/loading.gif' %}" class="menu_update_loading loading_{{item.id}}"/>
     </p>
     <!-- enddform -->
     </div>
